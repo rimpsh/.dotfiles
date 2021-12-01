@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+for folder in *; do
+	if [ -d "$folder" ]; then
+		echo "set up stow for: $folder"
+		stow --restow "$folder"
+	fi
+done

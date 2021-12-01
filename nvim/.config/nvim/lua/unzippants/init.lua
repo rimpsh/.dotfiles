@@ -1,0 +1,6 @@
+require("unzippants.telescope")
+require("unzippants.lsp")
+require("unzippants.statusline")
+require("unzippants.lsptrouble")
+require("unzippants.treesitter")
+require("unzippants.nvim-tree")
