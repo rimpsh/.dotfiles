@@ -1,0 +1,4 @@
+[submodule "personal"]
+	path = personal
+	url = git@github.com:rimpsh/dotfiles-personal.git
+    branch = master
