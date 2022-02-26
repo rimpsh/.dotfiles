@@ -1,15 +1,10 @@
-require("unzippants.util")
 local lspconfig = require "lspconfig"
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local servers = {
     tsserver = {},
-    angularls = {},
     gopls = {},
-    texlab = {},
-    ["null-ls"] = {},
 }
-
-require("unzippants.null-ls").setup()
 
 for name, opts in pairs(servers) do
     if type(opts) == "function" then
@@ -17,9 +12,7 @@ for name, opts in pairs(servers) do
     else
         local client = lspconfig[name]
         client.setup(vim.tbl_extend("force", {
-            flags = { debounce_text_changes = 150 },
-            on_attach = Util.lsp_on_attach,
-            on_init = Util.lsp_on_init,
+            capabilities = capabilities,
         }, opts))
     end
 end

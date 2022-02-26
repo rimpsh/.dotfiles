@@ -1,3 +1,8 @@
 require'lualine'.setup({
-    options = {theme = "nord"},
+    options = {
+      icons_enabled = true,
+      theme = 'tokyonight',
+      section_separators = { left = '', right = ''},
+      component_separators = { left = '', right = ''}
+    },
 })
