@@ -52,8 +52,4 @@ tmux
 - [nvm-fish](https://github.com/jorgebucaran/nvm.fish)
 - [spotify-theme](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Sleek)
 
-## XFCE and i3
-i was also testing XFCE in combination with i3, but i did not like it. but still here is how you can run both together.
-- Switch xfwm4 and xfdesktop in the `Current Session` tab under `Session and Startup` from `Immediately` to `Never` after that save the session.
-- Move to the `Application Autostart` tab and add `i3` (make sure it is checked)
-- remove all keyboard application shortcuts (you can leave media keys or other stuff, if you do not want to set them in your i3 .config seperately)
+This dotfile setup (and especially the [nvim](https://github.com/neovim/neovim) part) is heavily inspired by: [ThePrimeagen](https://github.com/ThePrimeagen/.dotfiles)
