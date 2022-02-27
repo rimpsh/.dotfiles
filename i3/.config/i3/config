@@ -46,8 +46,8 @@ bindsym $mod+q kill
 exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec "rofi -modi drun,run,window -show drun -theme nord"
-bindsym $mod+Shift+d exec "rofi -modi window -show window -theme nord"
+bindsym $mod+d exec "rofi -modi drun,run,window -show drun -theme tokyonight"
+bindsym $mod+Shift+d exec "rofi -modi window -show window -theme tokyonight"
 
 # change focus
 bindsym $mod+h focus left

@@ -9,12 +9,12 @@ configuration {
 }
 
 * {
-	background-color:            #2e3440;
-	text-color:                  #eceff4;
-	selbg:                       #66cccc;
-	actbg:                       #4c566a;
+	background-color:            #24283b;
+	text-color:                  #c0caf5;
+	selbg:                       #9ece6a;
+	actbg:                       #565f89;
 	urgbg:                       #bf616a;
-	winbg:                       #66cccc;
+	winbg:                       #7dcfff;
 
 	selected-normal-foreground:  @winbg;
 	normal-foreground:           @text-color;
@@ -40,10 +40,10 @@ configuration {
 }
 
 window {
-	location:	 west;
-	anchor:		 west;
-	height:		 100%;
-	width:		 30%;
+	height:		 40%;
+	width:		 60%;
+    border: 2px;
+    border-color: @text-color;
 	orientation: horizontal;
 	children:	 [mainbox];
 }
@@ -58,11 +58,6 @@ button { padding: 5px 2px; }
 button selected {
 	background-color: @active-background;
 	text-color:       @background-color;
-}
-
-inputbar {
-	padding: 5px;
-	spacing: 5px;
 }
 
 listview {
