@@ -25,8 +25,8 @@ cmp.setup({
         })
     },
     mapping = {
-      ['<C-j>'] = cmp.mapping.select_next_item(),
-      ['<C-k>'] = cmp.mapping.select_prev_item(),
+      ['<C-j>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-k>'] = cmp.mapping.scroll_docs(4),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
 
       ["<Tab>"] = cmp.mapping(function(fallback)
@@ -55,9 +55,8 @@ cmp.setup({
     { name = 'buffer', priority_weight = 3 },
     { name = 'path', priority_weight = 4},
     },
-    experimental = {
-      native_menu = false,
-      ghost_text = true,
+    view = {
+      entries = 'native'
     },
 })
 
