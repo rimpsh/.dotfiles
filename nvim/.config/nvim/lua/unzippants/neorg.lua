@@ -10,10 +10,16 @@ require('neorg').setup {
         ["core.norg.dirman"] = {
             config = {
                 workspaces = {
-                    world = "~/notes",
+                    world = "~/notes/world",
+                    gtd = "~/notes/gtd",
                 },
                 autodetect = true,
                 autochddir = true,
+            }
+        },
+        ["core.gtd.base"] = {
+            config = {
+                workspace = "gtd"
             }
         }
     }
