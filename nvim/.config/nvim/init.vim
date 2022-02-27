@@ -6,6 +6,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
 
 " statusline
 Plug 'hoob3rt/lualine.nvim'
@@ -27,16 +28,24 @@ Plug 'folke/trouble.nvim'
 Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-projectionist'
 Plug 'gpanders/editorconfig.nvim'
 Plug 'folke/todo-comments.nvim'
+
+" vsnip
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 
 " telescope requirements...
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+" notes
+Plug 'nvim-neorg/neorg'
+
+" refactor
+Plug 'ThePrimeagen/refactoring.nvim'
 
 " looks
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }

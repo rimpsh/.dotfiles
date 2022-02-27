@@ -36,3 +36,6 @@ set updatetime=50
 set shortmess+=c
 
 set colorcolumn=80
+
+set completeopt=menuone,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
