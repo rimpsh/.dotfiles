@@ -1,6 +1,15 @@
 local cmp = require'cmp'
 local lspkind = require('lspkind')
 
+local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
+
+local feedkey = function(key, mode)
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
+end
+
 cmp.setup({
     enabled = function()
       -- disable completion in comments
@@ -47,7 +56,7 @@ cmp.setup({
         elseif vim.fn["vsnip#jumpable"](-1) == 1 then
           feedkey("<Plug>(vsnip-jump-prev)", "")
         end
-      end, { "i", "s" }),
+      end, { "i", "s" })
     },
     sources = {
      { name = 'nvim_lsp', priortiy_weight = 1},
