@@ -21,6 +21,18 @@ require('neorg').setup {
             config = {
                 workspace = "gtd"
             }
+        },
+        ["core.presenter"] = {
+            config = {
+                zen_mode = "truezen"
+            }
+        },
+        ["core.norg.journal"] = {
+            config = {
+                workspace = "world",
+                journal_folder = "journal",
+                strategy = "flat"
+            }
         }
     }
 }

@@ -8,9 +8,6 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
 
-" statusline
-Plug 'hoob3rt/lualine.nvim'
-
 "treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -21,7 +18,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-neo-tree/neo-tree.nvim'
 Plug 'MunifTanjim/nui.nvim'
 
-" lsp trouble and
+" lsp trouble
 Plug 'folke/trouble.nvim'
 
 " other
@@ -49,6 +46,8 @@ Plug 'ThePrimeagen/refactoring.nvim'
 
 " looks
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'Pocco81/TrueZen.nvim'
+Plug 'hoob3rt/lualine.nvim'
 call plug#end()
 
 " add some lua shit
