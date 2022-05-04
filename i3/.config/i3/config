@@ -45,7 +45,7 @@ bindsym $mod+c exec kitty
 bindsym $mod+q kill
 
 # auto lock the screen
-exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
+exec "xautolock -detectsleep -time 10 -locker \"i3lock -c 000000\""
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -modi drun,run,window -show drun -theme tokyonight"
