@@ -2,7 +2,7 @@ require("neo-tree").setup {
   use_libuv_file_watcher = true,
   filesystem = {
     filters = {
-        show_hidden = false,
+        show_hidden = true,
         respect_gitignore = true,
     },
     window = {
