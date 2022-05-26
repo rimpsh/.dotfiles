@@ -31,6 +31,7 @@ This will be turned into a little script
 # install yay!
 # make sure to add yourself to the video group
 light
+dunst
 nm-connection-editor
 pavucontrol
 network-manager-applet
