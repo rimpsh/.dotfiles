@@ -2,10 +2,11 @@
 
 these .dotfiles are here in case i fuck something up or need to install on a new bipidy bopidy boop.
 
-:gem: i mainly run [Ubuntu](https://ubuntu.com/) with i3wm. :gem:
+:gem: i do use arch now btw :) :gem:
 
 ## Setup
 the following describes what you have to do after a fresh install
+this will be moved into an install script
 ### Preparations
 ```bash
 # make fish default shell
@@ -18,32 +19,47 @@ mkdir -p $HOME/.local/share/nvm/
 # install dotfiles (if stow throws errors delete the already existing folders)
 ./install
 ```
-### Packages
+
+```bash
+# create cached image for betterlocksreen
+betterlockscreen -u ~/Pictures/Wallpapers/Wallpaper6.jpeg
 ```
-stow
-rofi
-alacritty
-polybar
-kitty
-betterlockscreen
-neovim
-zathura
-zathura-pdf-mupdf
-xsel
-flameshot
+
+### Packages
+This will be turned into a little script
+```
+# install yay!
+# make sure to add yourself to the video group
+light
+nm-connection-editor
+pavucontrol
+network-manager-applet
+arandr
+autorandr
 go
 gopls
-yubioath-desktop
-networkmanager-vpnc
-protobuf
-fish
-starship
-nerd-fonts-jetbrains-mono
+delve
+xclip
 ripgrep
-mpv
-htop
-tmux
+kitty
+stow
+bluez
+bluez-utils
+blueman
+neofetch
+code
+rofi
+starship
+fish
+tlp
+tlpui
+feh
+betterlockscreen
+
+# these need yay or something other
+neovim-nightly-bin
 ```
+
 ### Placeholder
 
 ## Links
