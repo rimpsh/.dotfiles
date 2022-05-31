@@ -50,6 +50,7 @@ map('n', '<leader>vi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true
 map('n', '<leader>vsh', ':lua vim.lsp.buf.signature_help()<CR>', { noremap = true })
 map('n', '<leader>vca', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true })
 map('n', '<leader>vll', ':lua vim.lsp.diagnostic.set_loclist()<CR>', { noremap = true })
+map('n', '<leader>vrc', ':lua require("unzippants.telescope").dotfiles()<CR>', { noremap = true })
 
 -- trouble
 map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>", {silent = true, noremap = true})

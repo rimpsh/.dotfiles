@@ -1,3 +1,4 @@
+require("unzippants.plugins")
 require("unzippants.telescope")
 require("unzippants.lsp")
 require("unzippants.refactor")

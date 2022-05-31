@@ -1,9 +1,9 @@
 require("neo-tree").setup {
   use_libuv_file_watcher = true,
   filesystem = {
-    filters = {
-        show_hidden = true,
-        respect_gitignore = true,
+    filtered_items = {
+        hide_dotfiles = false,
+        hide_gitignored= true,
     },
     window = {
       position = "left",

@@ -41,6 +41,17 @@ require('telescope').setup {
             "custom_builds"
         },
 
+        vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--hidden"
+        },
+
         mappings = {
             i = {
                 ["<C-x>"] = false,
@@ -75,6 +86,15 @@ local M = {}
             --   :h telescope.layout ->
             --   :h telescope.actions
             --
+
+M.dotfiles = function()
+	require("telescope.builtin").find_files({
+		prompt_title = "< DOTS >",
+		cwd = vim.env.DOTFILES,
+		hidden = true,
+	})
+end
+
 
 M.git_branches = function()
     require("telescope.builtin").git_branches({

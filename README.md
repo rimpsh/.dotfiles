@@ -11,9 +11,6 @@ this will be moved into an install script
 ```bash
 # make fish default shell
 chsh -s /usr/bin/fish
-# install vim-plug
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 # create nvm folder
 mkdir -p $HOME/.local/share/nvm/
 # install dotfiles (if stow throws errors delete the already existing folders)
@@ -56,6 +53,15 @@ tlp
 tlpui
 feh
 betterlockscreen
+element-desktop
+man-db
+man-pages
+# add to docker group
+# start/enable service
+docker
+docker-compose
+containerlab-bin
+nvim-packer-git
 
 # these need yay or something other
 neovim-nightly-bin
