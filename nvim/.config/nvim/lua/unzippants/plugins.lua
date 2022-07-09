@@ -16,8 +16,8 @@ require('packer').startup(function()
     use 'mbbill/undotree'
 
 	-- git plugins
-	use 'tpope/vim-fugitive'
     use 'junegunn/gv.vim'
+    use 'TimUntersberger/neogit'
 
 	-- lsp
 	use 'neovim/nvim-lspconfig'

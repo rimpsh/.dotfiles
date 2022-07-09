@@ -18,7 +18,7 @@ map('n', '<leader>grum', ':Git rebase upstream/master<CR>', { noremap = true })
 map('n', '<leader>grom', ':Git rebase origin/master<CR>', { noremap = true })
 map('n', '<leader>gj', ':diffget //3<CR>', { noremap = true })
 map('n', '<leader>gf', ':diffget //2<CR>', { noremap = true })
-map('n', '<leader>gs', ':G<CR>', { noremap = true })
+map('n', '<leader>gs', ':Neogit<CR>', { noremap = true })
 
 -- resize
 map('n', '<leader>+', ':vertical resize +5<CR>', { noremap = true })
