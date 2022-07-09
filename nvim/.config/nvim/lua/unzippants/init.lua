@@ -12,6 +12,7 @@ require("unzippants.nvim-cmp")
 require("unzippants.todo-comments")
 require("unzippants.neorg")
 require("unzippants.quickfix")
+require("unzippants.neogit")
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
