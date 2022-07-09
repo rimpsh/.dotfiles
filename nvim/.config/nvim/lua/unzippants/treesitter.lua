@@ -9,9 +9,11 @@ require('nvim-treesitter.configs').setup {
         "toml",
         "html",
     },
+    ignore_install = { "" },
 
     highlight = {
-        enable = true,
+		enable = true,
+		disable = { "css" },
     },
 
     textobjects = {

@@ -1,7 +1,10 @@
+local map = vim.api.nvim_set_keymap;
+
+map('n', '<space>', '<nop>', { noremap = true })
+map('n', 'Q', '<nop>', { noremap = true })
 vim.g.loaded_matchparen = 1
 vim.g.mapleader = " "
 
-local map = vim.api.nvim_set_keymap;
 
 -- navigation
 map('n', '<leader>h', ':wincmd h<CR>', { noremap = true })
@@ -28,7 +31,7 @@ map('v', '<leader>y', '"+y', { noremap = true }) map('n', '<leader>Y', 'gg"+yG',
 
 -- others
 map('n', '<leader>ghw', ':h <C-R>=expand("<cword>")<CR><CR>', { noremap = true })
-map('n', '<C-n>', ':NeoTreeShowToggle<CR>', { noremap = true })
+map('n', '<C-n>', ':Neotree toggle<CR>', { noremap = true })
 map('n', '<leader>u', ':UndotreeShow<CR>', { noremap = true })
 
 -- lsp

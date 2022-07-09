@@ -62,12 +62,28 @@ docker
 docker-compose
 containerlab-bin
 nvim-packer-git
+spotify
+mpv
+ttf-dejavu
+nerd-fonts-jetbrains-mono
+noto-fonts
+udisks2
+udiskie
+avahi
+nss-mdns
+cups
+cups-pdf
+gvfs
+gvfs-smb
+sshfs
 
 # these need yay or something other
 neovim-nightly-bin
+brave-bin
 ```
 
 ### Placeholder
+`xrandr --output eDP --set TearFree on`
 
 ## Links
 - [vim-plug](https://github.com/junegunn/vim-plug)
