@@ -7,10 +7,10 @@ vim.g.mapleader = " "
 
 
 -- navigation
-map('n', '<leader>h', ':wincmd h<CR>', { noremap = true })
-map('n', '<leader>j', ':wincmd j<CR>', { noremap = true })
-map('n', '<leader>k', ':wincmd k<CR>', { noremap = true })
-map('n', '<leader>l', ':wincmd l<CR>', { noremap = true })
+map('n', '<leader>h', ':winc h<CR>', { noremap = true })
+map('n', '<leader>j', ':winc j<CR>', { noremap = true })
+map('n', '<leader>k', ':winc k<CR>', { noremap = true })
+map('n', '<leader>l', ':winc l<CR>', { noremap = true })
 
 -- git
 map('n', '<leader>ga', ':Git fetch --all<CR>', { noremap = true })
@@ -72,7 +72,7 @@ map("n", "<leader>rc", ":lua require('refactoring').debug.cleanup({})<CR>", { no
 -- quickfix
 map('n', '<C-k>', ':cnext<CR>zz', { noremap = true });
 map('n', '<C-j>', ':cprev<CR>zz', { noremap = true });
-map('n', '<Leader>k', ':lnext<CR>zz', { noremap = true });
-map('n', '<Leader>j', ':lprev<CR>zz', { noremap = true });
+map('n', '<A-k>', ':lnext<CR>zz', { noremap = true });
+map('n', '<A-j>', ':lprev<CR>zz', { noremap = true });
 map('n', '<C-q>', "<cmd>lua require('unzippants.quickfix').toggle(1)<CR>", { noremap = true, silent = true });
 map('n', '<Leader>q', "<cmd>lua require('unzippants.quickfix').toggle(0)<CR>", { noremap = true, silent = true });
