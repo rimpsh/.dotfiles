@@ -209,3 +209,6 @@ client.unfocused		    $bgcolor	$bgcolor	$textcolor	$bgcolor
 client.focused	    $ibgcolor	$ibgcolor	$itextcolor	$ibgcolor
 client.focused_inactive	$ibgcolor	$ibgcolor	$itextcolor	$ibgcolor
 client.urgent		    $ubgcolor	$ubgcolor	$textcolor	$ubgcolor
+
+# Auto change display conf
+exec --no-startup-id autorandr -c
