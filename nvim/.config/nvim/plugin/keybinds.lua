@@ -34,10 +34,6 @@ map('n', '<leader>ghw', ':h <C-R>=expand("<cword>")<CR><CR>', { noremap = true }
 map('n', '<C-n>', ':Neotree toggle<CR>', { noremap = true })
 map('n', '<leader>u', ':UndotreeShow<CR>', { noremap = true })
 
--- lsp
-map('n', '<leader>vrn', ':lua vim.lsp.buf.rename()<CR>', { noremap = true })
-map('n', 'K', ':lua vim.lsp.buf.hover()<CR>', { noremap = true })
-
 -- telescope
 map('n', '<leader>ps', ':lua require("telescope.builtin").grep_string({ search = vim.fn.input("Grep For > ")})<CR>', { noremap = true })
 map('n', '<C-p>', ':lua require("telescope.builtin").git_files()<CR>', { noremap = true })
@@ -46,12 +42,8 @@ map('n', '<leader>pw', ':lua require("telescope.builtin").grep_string { search =
 map('n', '<leader>pb', ':lua require("telescope.builtin").buffers()<CR>', { noremap = true })
 map('n', '<leader>vh', ':lua require("telescope.builtin").help_tags()<CR>', { noremap = true })
 map('n', '<leader>gc', ':lua require("unzippants.telescope").git_branches()<CR>', { noremap = true })
-map('n', '<leader>vrr', ':lua require("telescope.builtin").lsp_references()<CR>', { noremap = true })
-map('n', '<leader>vd', ':lua require("telescope.builtin").lsp_definitions()<CR>', { noremap = true })
 map('n', '<leader>vsd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true })
 map('n', '<leader>vi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true })
-map('n', '<leader>vsh', ':lua vim.lsp.buf.signature_help()<CR>', { noremap = true })
-map('n', '<leader>vca', ':lua vim.lsp.buf.code_action()<CR>', { noremap = true })
 map('n', '<leader>vll', ':lua vim.lsp.diagnostic.set_loclist()<CR>', { noremap = true })
 map('n', '<leader>vrc', ':lua require("unzippants.telescope").dotfiles()<CR>', { noremap = true })
 
