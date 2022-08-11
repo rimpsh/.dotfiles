@@ -32,7 +32,7 @@ lspconfig.gopls.setup(config({
 			analyses = {
 				unusedparams = true,
 			},
-			staticcheck = true,
+            --staticcheck = true,
             buildFlags =  {"-tags=linux,freebsd"},
 		},
 	},
