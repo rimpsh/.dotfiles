@@ -82,13 +82,19 @@ require('packer').startup(function()
 
     -- nvim tree file explorer
     use {
-    "nvim-neo-tree/neo-tree.nvim",
+        "nvim-neo-tree/neo-tree.nvim",
         branch = "v2.x",
         requires = {
             "nvim-lua/plenary.nvim",
             "kyazdani42/nvim-web-devicons",
             "MunifTanjim/nui.nvim",
+            "s1n7ax/nvim-window-picker",
         }
+    }
+
+    use {
+        "s1n7ax/nvim-window-picker",
+        tag = "v1.*",
     }
 
     -- todo comments
