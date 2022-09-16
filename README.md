@@ -76,6 +76,10 @@ cups-pdf
 gvfs
 gvfs-smb
 sshfs
+zip
+xarchiver
+thunar
+thunar-archive-plugin
 
 # these need yay or something other
 neovim-nightly-bin

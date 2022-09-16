@@ -42,7 +42,6 @@ map('n', '<leader>pw', ':lua require("telescope.builtin").grep_string { search =
 map('n', '<leader>pb', ':lua require("telescope.builtin").buffers()<CR>', { noremap = true })
 map('n', '<leader>vh', ':lua require("telescope.builtin").help_tags()<CR>', { noremap = true })
 map('n', '<leader>gc', ':lua require("unzippants.telescope").git_branches()<CR>', { noremap = true })
-map('n', '<leader>vsd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', { noremap = true })
 map('n', '<leader>vi', ':lua vim.lsp.buf.implementation()<CR>', { noremap = true })
 map('n', '<leader>vll', ':lua vim.lsp.diagnostic.set_loclist()<CR>', { noremap = true })
 map('n', '<leader>vrc', ':lua require("unzippants.telescope").dotfiles()<CR>', { noremap = true })
