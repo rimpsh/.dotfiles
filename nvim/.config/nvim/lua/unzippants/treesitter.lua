@@ -1,19 +1,10 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = {
-        "go",
-        "typescript",
-        "tsx",
-        "lua",
-        "norg",
-        "json",
-        "toml",
-        "html",
-    },
-    ignore_install = { "" },
-
+    ensure_installed = "all",
+    sync_install = false,
+    ignore_install = { "phpdoc" },
     highlight = {
 		enable = true,
-		disable = { "css" },
+        additional_vim_regex_highlighting = false,
     },
 
     textobjects = {

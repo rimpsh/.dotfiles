@@ -25,68 +25,26 @@ local new_maker = function(filepath, bufnr, opts)
   }):sync()
 end
 
-require('telescope').setup {
-    defaults = {
-        prompt_prefix = ' >',
-        color_devicons = true,
+require("telescope").setup({
+	defaults = {
+		file_sorter = sorters.get_fzy_sorter,
+		prompt_prefix = " >",
+		color_devicons = true,
 
-        file_previewer   = previewers.vim_buffer_cat.new,
-        grep_previewer   = previewers.vim_buffer_vimgrep.new,
-        qflist_previewer = previewers.vim_buffer_qflist.new,
-        buffer_previewer_maker = new_maker,
+		file_previewer = previewers.vim_buffer_cat.new,
+		grep_previewer = previewers.vim_buffer_vimgrep.new,
+		qflist_previewer = previewers.vim_buffer_qflist.new,
 
-        file_ignore_patterns = {
-            "node_modules",
-            "custom_builds"
-        },
-
-        vimgrep_arguments = {
-            "rg",
-            "--color=never",
-            "--no-heading",
-            "--with-filename",
-            "--line-number",
-            "--column",
-            "--smart-case",
-            "--hidden"
-        },
-
-        mappings = {
-            i = {
-                ["<C-x>"] = false,
-                ["<C-q>"] = actions.send_to_qflist,
-            },
-        }
-    },
-    extensions = {
-        fzf = {
-            fuzzy = true,                    -- false will only do exact matching
-            override_generic_sorter = true,  -- override the generic sorter
-            override_file_sorter = true,     -- override the file sorter
-            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-        }
-    }
-}
-
-require('telescope').load_extension('fzf')
+		mappings = {
+			i = {
+				["<C-x>"] = false,
+				["<C-q>"] = actions.send_to_qflist,
+			},
+		},
+	},
+})
 
 local M = {}
-            -- map(mode, key, lua function to call)
-            --
-            -- good place to look: telescope.actions (init.lua)
-            -- lua function to call:  (gets bufnr, not necessarily needed)
-            --   require('telescope.actions.state').get_selected_entry(bufnr)
-            --   Actions just take the bufnr and give out information
-            --   require('telescope.actions').close(bufnr)
-            --
-            --   check out telescope.actions for _all the available_ supported
-            --   actions.
-            --
-            --   :h telescope.setup ->
-            --   :h telescope.builtin ->
-            --   :h telescope.layout ->
-            --   :h telescope.actions
-            --
 
 M.dotfiles = function()
 	require("telescope.builtin").find_files({

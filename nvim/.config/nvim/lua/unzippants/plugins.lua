@@ -35,7 +35,7 @@ require('packer').startup(function()
         requires = {
             {'nvim-lua/popup.nvim'},
             {'nvim-lua/plenary.nvim'},
-            {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+            {'nvim-telescope/telescope-fzy-native.nvim'}
         }
     }
 
@@ -54,12 +54,6 @@ require('packer').startup(function()
         }
     }
 
-    -- neorg
-    use {
-        "nvim-neorg/neorg",
-        requires = "nvim-lua/plenary.nvim"
-    }
-
 	-- diagnostic
 	use {
 		"folke/trouble.nvim",
@@ -72,7 +66,8 @@ require('packer').startup(function()
         run = ':TSUpdate',
         requires = {
             {'nvim-treesitter/nvim-treesitter-textobjects'},
-            {'nvim-treesitter/playground'}
+            {'nvim-treesitter/playground'},
+            {'nvim-treesitter/nvim-treesitter-context'}
         },
 	}
 
