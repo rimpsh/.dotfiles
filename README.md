@@ -80,6 +80,7 @@ zip
 xarchiver
 thunar
 thunar-archive-plugin
+aerc
 
 # these need yay or something other
 neovim-nightly-bin

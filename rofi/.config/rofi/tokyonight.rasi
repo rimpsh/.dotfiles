@@ -5,7 +5,7 @@ configuration {
 	display-ssh:	 " Ssh";
 	sidebar-mode:    true;
 	show-icons:true;
-	font: "JetBrainsMono Nerd Font 10";
+	font: "Mono Lisa 11";
 }
 
 * {
