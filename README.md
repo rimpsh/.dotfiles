@@ -81,6 +81,10 @@ xarchiver
 thunar
 thunar-archive-plugin
 aerc
+wireguard-tools
+# systemctl enable systemd-resolved.service
+systemd-resolvconf
+protonvpn-cli
 
 # these need yay or something other
 neovim-nightly-bin
