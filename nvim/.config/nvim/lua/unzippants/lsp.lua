@@ -38,6 +38,19 @@ lspconfig.gopls.setup(config({
 	},
 }))
 
+lspconfig.ansiblels.setup(config())
+
+lspconfig.rust_analyzer.setup(config({
+	cmd = { "rustup", "run", "nightly", "rust-analyzer" },
+	settings = {
+		rust = {
+            unstable_reatures = true,
+            build_on_save = false,
+            all_features = true,
+		},
+	},
+}))
+
 -- copy paste from: https://github.com/neovim/nvim-lspconfig/issues/115#issuecomment-902680058
 function org_imports(wait_ms)
   local params = vim.lsp.util.make_range_params()

@@ -1,14 +1,37 @@
 local cmp = require'cmp'
-local lspkind = require('lspkind')
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local feedkey = function(key, mode)
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
-end
+local kind_icons = {
+	Text = "",
+	Method = "m",
+	Function = "",
+	Constructor = "",
+	Field = "",
+	Variable = "",
+	Class = "",
+	Interface = "",
+	Module = "",
+	Property = "",
+	Unit = "",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "",
+	Event = "",
+	Operator = "",
+	TypeParameter = "",
+}
 
 cmp.setup({
     enabled = function()
@@ -24,56 +47,59 @@ cmp.setup({
     end,
     snippet = {
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
       end,
     },
     formatting = {
-        format = lspkind.cmp_format({
-          mode = 'symbol',
-          maxwidth = 50,
-        })
+	    fields = { "kind", "abbr", "menu" },
+	    format = function(entry, vim_item)
+	    	vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+	    	vim_item.menu = ({
+	    		buffer = "[Buffer]",
+	    		nvim_lsp = "[LSP]",
+                nvim_lua = "[Lua]",
+	    		luasnip = "LuaSnip",
+	    		path = "[Path]",
+	    	})[entry.source.name]
+	    	return vim_item
+	    end,
     },
     mapping = {
-      ['<C-j>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-k>'] = cmp.mapping.scroll_docs(4),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-j>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-k>'] = cmp.mapping.scroll_docs(4),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
-      ["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.select_next_item()
-        elseif vim.fn["vsnip#available"](1) == 1 then
-          feedkey("<Plug>(vsnip-expand-or-jump)", "")
-        elseif has_words_before() then
-          cmp.complete()
-        else
-          fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-        end
-      end, { "i", "s" }),
+        ['<Tab>'] = function(fallback)
+          if not cmp.select_next_item() then
+            if vim.bo.buftype ~= 'prompt' and has_words_before() then
+              cmp.complete()
+            else
+              fallback()
+            end
+          end
+        end,
 
-      ["<S-Tab>"] = cmp.mapping(function()
-        if cmp.visible() then
-          cmp.select_prev_item()
-        elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-          feedkey("<Plug>(vsnip-jump-prev)", "")
-        end
-      end, { "i", "s" })
+        ['<S-Tab>'] = function(fallback)
+          if not cmp.select_prev_item() then
+            if vim.bo.buftype ~= 'prompt' and has_words_before() then
+              cmp.complete()
+            else
+              fallback()
+            end
+          end
+        end,
     },
     sources = {
-     { name = 'nvim_lsp', priortiy_weight = 1},
-     -- { name = 'luasnip', keyword_length = 2, max_item_count = 5, priority_weight = 2 },
-    { name = 'buffer', priority_weight = 3 },
-    { name = 'path', priority_weight = 4},
+        { name = 'nvim_lsp', priortiy_weight = 1},
+        { name = 'luasnip', priority_weight = 2 },
+        { name = 'buffer', priority_weight = 3 },
+        { name = 'path', priority_weight = 4},
+    },
+    confirm_opts = {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = false,
     },
     view = {
       entries = 'native'
     },
-})
-
--- set configuration for neorg files
-cmp.setup.filetype('norg', {
-  sources = cmp.config.sources({
-    { name = 'neorg' },
-  }, {
-    { name = 'buffer' },
-  })
 })
