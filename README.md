@@ -64,6 +64,8 @@ containerlab-bin
 nvim-packer-git
 spotify
 mpv
+rustup
+rust-analyzer
 ttf-dejavu
 nerd-fonts-jetbrains-mono
 noto-fonts
