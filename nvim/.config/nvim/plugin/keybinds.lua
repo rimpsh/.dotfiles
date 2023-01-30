@@ -67,3 +67,7 @@ map('n', '<A-k>', ':lnext<CR>zz', { noremap = true });
 map('n', '<A-j>', ':lprev<CR>zz', { noremap = true });
 map('n', '<C-q>', "<cmd>lua require('unzippants.quickfix').toggle(1)<CR>", { noremap = true, silent = true });
 map('n', '<Leader>q', "<cmd>lua require('unzippants.quickfix').toggle(0)<CR>", { noremap = true, silent = true });
+
+-- worktree
+map('n', '<leader>gws', ":lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { noremap = true });
+map('n', '<leader>gwc', ":lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>", { noremap = true });

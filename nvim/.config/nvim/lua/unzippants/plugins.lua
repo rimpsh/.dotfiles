@@ -103,4 +103,15 @@ require('packer').startup(function()
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
     }
+
+    -- git-worktree
+    use {
+        "ThePrimeagen/git-worktree.nvim",
+        requires = {
+            {"nvim-telescope/telescope.nvim"},
+            {"nvim-lua/popup.nvim"},
+            {"nvim-lua/plenary.nvim"},
+            {"nvim-telescope/telescope-fzy-native.nvim"}
+        }
+    }
 end)
