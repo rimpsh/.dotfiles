@@ -34,6 +34,9 @@ lspconfig.gopls.setup(config({
 			},
             --staticcheck = true,
             buildFlags =  {"-tags=linux,freebsd"},
+            directoryFilters = {
+                "-**/node_modules",
+            },
 		},
 	},
 }))

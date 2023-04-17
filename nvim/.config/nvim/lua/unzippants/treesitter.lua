@@ -5,8 +5,13 @@ require('nvim-treesitter.configs').setup {
     highlight = {
 		enable = true,
         additional_vim_regex_highlighting = false,
+        max_file_lines = 10000,
+        disable = function(lang, bufnr)
+            return vim.fn.getfsize(vim.api.nvim_buf_get_name(bufnr)) > 1048576
+        end,
     },
-
+    indent = { enable = false },
+    incremental_selection = { enable = false },
     textobjects = {
         move = {
           enable = true,

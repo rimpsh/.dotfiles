@@ -34,6 +34,7 @@ pavucontrol
 network-manager-applet
 arandr
 autorandr
+fwupd
 go
 gopls
 delve

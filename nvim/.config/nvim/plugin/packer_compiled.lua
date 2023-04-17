@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/bob/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/bob/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -99,10 +104,10 @@ _G.packer_plugins = {
     path = "/home/bob/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-vsnip"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/home/bob/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/home/bob/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["diffview.nvim"] = {
     loaded = true,
@@ -113,6 +118,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bob/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
     url = "https://github.com/gpanders/editorconfig.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/bob/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["git-worktree.nvim"] = {
+    loaded = true,
+    path = "/home/bob/.local/share/nvim/site/pack/packer/start/git-worktree.nvim",
+    url = "https://github.com/ThePrimeagen/git-worktree.nvim"
   },
   ["gv.vim"] = {
     loaded = true,
@@ -238,11 +253,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bob/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/bob/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   }
 }
 
