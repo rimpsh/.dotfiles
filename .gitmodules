@@ -2,3 +2,6 @@
 	path = personal
 	url = git@github.com:rimpsh/dotfiles-personal.git
     branch = master
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/rimpsh/init.lua.git
