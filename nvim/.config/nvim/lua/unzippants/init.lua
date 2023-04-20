@@ -1,20 +1,9 @@
 local augroup = vim.api.nvim_create_augroup
 
+require("unzippants.colorscheme")
+require("unzippants.settings")
+require("unzippants.keybinds")
 require("unzippants.plugins")
-require("unzippants.telescope")
-require("unzippants.lsp")
-require("unzippants.refactor")
-require("unzippants.statusline")
-require("unzippants.lsptrouble")
-require("unzippants.treesitter")
-require("unzippants.treesitter-context")
-require("unzippants.neo-tree")
-require("unzippants.luasnip")
-require("unzippants.nvim-cmp")
-require("unzippants.todo-comments")
-require("unzippants.quickfix")
-require("unzippants.neogit")
-require("unzippants.worktree")
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
