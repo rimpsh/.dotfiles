@@ -27,6 +27,7 @@ This will be turned into a little script
 ```
 # install yay!
 # make sure to add yourself to the video group
+picom
 light
 dunst
 nm-connection-editor
